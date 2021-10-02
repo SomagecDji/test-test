@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <template id="assets_frontend" name="documents assets frontend" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">>
+            <link rel="stylesheet" type="text/scss" href="/custom_documents/static/scss/custom_panel_search.scss"/>
+        </xpath>
+    </template>
+</odoo>

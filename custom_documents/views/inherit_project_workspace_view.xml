@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="inherit_workspace_form_view" model="ir.ui.view">
+        	<field name="name">documents.folder.form</field>
+        	<field name="model">documents.folder</field>
+        	<field name="type">form</field> <field name="arch" type="xml">
+        	<form string="inherit workspace">
+                <group>
+                <field name="project_name"/>
+                 </group>
+                <footer>
+                   <button type="object" name="inherit_workspace" class="oe_highlight" string="Créer" />
+                    <button special="cancel" string="Annuler" class="btn-default"/>
+                </footer>
+        	</form>
+            </field>        
+        </record>
+    </data>
+</odoo>

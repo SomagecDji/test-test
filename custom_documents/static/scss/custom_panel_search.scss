@@ -1,0 +1,10 @@
+.o_search_panel_label_title{
+    font-size:12px; 
+}
+
+.o_controller_with_searchpanel .o_search_panel {
+flex-basis: 300px;
+}
+.o_controller_with_searchpanel .o_search_panel .list-group-item span.o_search_panel_label_title {
+    white-space: break-spaces;
+}
