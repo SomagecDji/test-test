@@ -142,6 +142,19 @@ class DocumentFolder(models.Model):
         self.env.cr.execute("""delete from documents_folder where create_date > (select NOW() - interval '1' hour)""")
     def delete_sign_archive(self):
         self.env.cr.execute("""delete from sign_template where active=False""")
+    def create_document_sign_action(self):
+        all_folders=self.env['documents.folder'].search([])
+        for folder in all_folders:
+            document_folder=self.env['documents.folder']
+            document_workflow_rule=self.env['documents.workflow.rule']
+            new_document_workflow_rule=document_workflow_rule.create({'name':'Demander une signature','domain_folder_id':folder.id,
+                                                                      'condition_type':'domain','domain':'[["mimetype","ilike","pdf"]]',
+                                                                     'create_model':'sign.template.direct'})
+        return()
+            
+            
+        
+        
 """class SignSendRequest(models.Model):
     _description = 'Sign Send Request'
     _inherit = 'sign.send.request' """
