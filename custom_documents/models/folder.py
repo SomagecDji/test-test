@@ -147,7 +147,7 @@ class DocumentFolder(models.Model):
         for folder in all_folders:
             document_folder=self.env['documents.folder']
             document_workflow_rule=self.env['documents.workflow.rule']
-            verify_list=self.env['documents.folder'].search([('parent_folder_id','=',floder.id)])
+            verify_list=self.env['documents.folder'].search([('parent_folder_id','=',folder.id)])
             if len(verify_list)==0:
                 new_document_workflow_rule=document_workflow_rule.create({'name':'Demander une signature','domain_folder_id':folder.id,
                                                                       'condition_type':'domain','domain':'[["mimetype","ilike","pdf"]]',
