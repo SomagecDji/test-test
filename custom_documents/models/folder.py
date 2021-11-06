@@ -157,6 +157,10 @@ class DocumentFolder(models.Model):
 class Document(models.Model):
     _description = 'Document'
     _inherit = 'documents.document'
+    
+    
+    
+    
 
 
 
