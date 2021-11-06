@@ -154,8 +154,9 @@ class DocumentFolder(models.Model):
                                                                      'create_model':'sign.template.direct'})
         return()
 
-
-
+class Document(models.Model):
+    _description = 'Document'
+    _inherit = 'documents.document'
 
 
 
